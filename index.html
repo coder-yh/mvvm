@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>mvvm</title>
+  </head>
+  <body>
+    <div id="app">
+      <input type="text" v-model="sex.mal" />
+      <p class="class_node_1" title="node_node_1">{{ name }}</p>
+      <p class="node_2">{{ sex.mal }}</p>
+      <p class="node_3">node_3</p>
+      app_2
+      <div class="div_1"></div>
+    </div>
+    <script src="./js/dep.js"></script>
+    <script src="./js/watcher.js"></script>
+    <script src="./util/index.js"></script>
+    <script src="./js/observer.js"></script>
+    <script src="./js/compile.js"></script>
+    <script src="./js/index.js"></script>
+    <script>
+      var vm = new MVVM({
+        el: '#app',
+        data: {
+          name: 'mvvm模型',
+          age: 30,
+          sex: {
+            mal: '女',
+            faml: '男'
+          }
+        }
+      });
+      console.log(vm);
+    </script>
+  </body>
+</html>
