@@ -20,7 +20,6 @@ class Observer {
         return value;
       },
       set(newVal) {
-        console.log('newVal', newVal);
         if (newVal !== value) {
           _this.observe(newVal); // 重新赋值如果是对象进行深度劫持
           value = newVal;
