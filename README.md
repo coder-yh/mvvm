@@ -1,7 +1,5 @@
 # mvvm
 
-mvvm 简单实现
-
 ## 基本思路
 
 ![avatar](https://upload-images.jianshu.io/upload_images/9199255-aa098dd6b3a0eae4.png?imageMogr2/auto-orient/strip|imageView2/2/w/669/format/webp)
