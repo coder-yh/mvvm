@@ -3,8 +3,8 @@ class Observer {
     this.observe(data);
   }
   observe(data) {
-    if (!data || typeof data !== 'object') return;
-    Object.keys(data).forEach(key => {
+    if (!data || typeof data !== "object") return;
+    Object.keys(data).forEach((key) => {
       this.defineReactive(data, key, data[key]);
       this.observe(data[key]); // 对data下面的所有对象的key都做遍历
     });
@@ -16,6 +16,7 @@ class Observer {
       enumerable: true, // 是否可遍历
       configurable: true, // 是否可以删除
       get() {
+        // Dep.target => watcher
         Dep.target && dep.addSub(Dep.target);
         return value;
       },
@@ -25,7 +26,7 @@ class Observer {
           value = newVal;
           dep.notify(); // 通知所有人数据更新了
         }
-      }
+      },
     });
   }
 }
